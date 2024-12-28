@@ -9,4 +9,29 @@
 
 项目采用扣子 Coze 平台搭建，分为智能体与应用两个版本。具体架构如下。
 
+[架构图](架构图.html)
+
 ![架构图](架构图.svg)
+
+# SDK调用
+
+如果您想在您的网站中插入这个智能体，请复制以下代码插入到网页的`<body>`标签中。
+
+```html
+<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.0/libs/cn/index.js"></script>
+<script>
+    // 初始化 CozeWebSDK 聊天组件
+    new CozeWebSDK.WebChatClient({
+        config: {
+            bot_id: '7452988971405049910',  // 您的聊天机器人 ID
+        },
+        componentProps: {
+            title: '数据科学小精灵',  // 聊天组件的标题
+        },
+    });
+</script>
+```
+
+然后您的网页右下角就会出现一个按钮，点击后会展开。
+
+<img src="001.png" alt="001" style="zoom: 33%;" />
